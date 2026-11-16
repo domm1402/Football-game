@@ -1,0 +1,3 @@
+package com.pitchlegends;
+import android.app.Activity;import android.os.Bundle;import android.view.View;import android.view.Window;import android.view.WindowManager;import android.webkit.WebView;import android.webkit.WebSettings;
+public class MainActivity extends Activity{public void onCreate(Bundle b){super.onCreate(b);getWindow().requestFeature(Window.FEATURE_NO_TITLE);getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);getWindow().getDecorView().setSystemUiVisibility(5894|1024|512);WebView w=new WebView(this);w.setBackgroundColor(0xff071b12);WebSettings s=w.getSettings();s.setJavaScriptEnabled(true);s.setDomStorageEnabled(true);w.loadUrl("file:///android_asset/index.html");setContentView(w);}}
